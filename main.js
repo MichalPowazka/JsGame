@@ -10,6 +10,8 @@ const scissorsChoice = document.querySelector('#scissors')
 
 let playerChoice;
 let computerChoice;
+let playerScore = 0;
+let computerScore = 0;
 const start = (e) => {
     
     choice = e.target.id
@@ -76,32 +78,23 @@ const randomizeEnemyMove = () => {
 
 const showResult = () => {
     // resultOfBattle.innerHTML = ` Elo`
-    let playerScore = 0;
-    let computerScore = 0;
+    
 
     if(playerChoice == computerChoice) {
-        console.log('draw');
+        resultOfBattle.innerHTML = 'Draw'
     }
     if(playerChoice === 'rock' && computerChoice ==='paper' || playerChoice === 'paper' && computerChoice ==='scissors' || playerChoice === 'scissors' && computerChoice ==='rock') {
-        console.log('computer win');
+        computerScore++;
+        resultOfBattle.innerHTML = 'Computer Win'
+        computerPoints.innerHTML = `${computerScore}`
     }
 
     if(playerChoice === 'rock' && computerChoice ==='scissors' || playerChoice === 'paper' && computerChoice ==='rock' || playerChoice === 'scissors' && computerChoice ==='paper') {
-        console.log('player win');
+        playerScore++;
+        resultOfBattle.innerHTML = `Player Win`
+        playerPoints.innerHTML = `${playerScore}`
     }
-    // if(playerChoice === 'paper' && computerChoice ==='rock') {
-    //     console.log('player win');
-    // }
-    // if(playerChoice === 'paper' && computerChoice ==='scissors') { //
-    //     console.log('computer win');
-    // }
-
-    // if(playerChoice === 'scissors' && computerChoice ==='rock') { //
-    //     console.log('computer win');
-    // }
-    // if(playerChoice === 'scissors' && computerChoice ==='paper') {
-    //     console.log('player win');
-    // }
+   
     
     
 }

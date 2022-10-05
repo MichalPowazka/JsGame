@@ -82,26 +82,26 @@ const showResult = () => {
     if(playerChoice == computerChoice) {
         console.log('draw');
     }
-    if(playerChoice === 'rock' && computerChoice ==='paper') {
+    if(playerChoice === 'rock' && computerChoice ==='paper' || playerChoice === 'paper' && computerChoice ==='scissors' || playerChoice === 'scissors' && computerChoice ==='rock') {
         console.log('computer win');
     }
 
-    if(playerChoice === 'rock' && computerChoice ==='scissors') {
+    if(playerChoice === 'rock' && computerChoice ==='scissors' || playerChoice === 'paper' && computerChoice ==='rock' || playerChoice === 'scissors' && computerChoice ==='paper') {
         console.log('player win');
     }
-    if(playerChoice === 'paper' && computerChoice ==='rock') {
-        console.log('player win');
-    }
-    if(playerChoice === 'paper' && computerChoice ==='scissors') {
-        console.log('computer win');
-    }
+    // if(playerChoice === 'paper' && computerChoice ==='rock') {
+    //     console.log('player win');
+    // }
+    // if(playerChoice === 'paper' && computerChoice ==='scissors') { //
+    //     console.log('computer win');
+    // }
 
-    if(playerChoice === 'scissors' && computerChoice ==='rock') {
-        console.log('computer win');
-    }
-    if(playerChoice === 'scissors' && computerChoice ==='paper') {
-        console.log('player win');
-    }
+    // if(playerChoice === 'scissors' && computerChoice ==='rock') { //
+    //     console.log('computer win');
+    // }
+    // if(playerChoice === 'scissors' && computerChoice ==='paper') {
+    //     console.log('player win');
+    // }
     
     
 }

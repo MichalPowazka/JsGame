@@ -6,7 +6,9 @@ const computerPoints = document.querySelector('.computerPoints')
 const rockChoice = document.querySelector('#rock')
 const paperChoice = document.querySelector('#paper')
 const scissorsChoice = document.querySelector('#scissors')
+const allBtn = document.querySelectorAll('button')
 
+console.log(allBtn);
 
 let playerChoice;
 let computerChoice;
@@ -17,6 +19,9 @@ const start = (e) => {
     choice = e.target.id
     chosedOption(choice)
     animation()
+    allBtn.forEach( element => {
+        element.disabled = 'true'
+    })
 }
 
 const animation = () => {
@@ -51,7 +56,7 @@ const chosedOption = (choice) => {
     }
     randomizeEnemyMove()
     showResult()
-        },700)
+        },1000)
 
 }
 
@@ -94,6 +99,10 @@ const showResult = () => {
         resultOfBattle.innerHTML = `Player Win`
         playerPoints.innerHTML = `${playerScore}`
     }
+
+    allBtn.forEach( newelement => {
+        newelement.disabled = false;
+    })
    
     
     

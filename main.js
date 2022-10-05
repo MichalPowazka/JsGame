@@ -6,11 +6,10 @@ const computerPoints = document.querySelector('.computerPoints')
 const rockChoice = document.querySelector('#rock')
 const paperChoice = document.querySelector('#paper')
 const scissorsChoice = document.querySelector('#scissors')
-const btn = document.querySelector('button') 
 
-const options = [rock,paper,scissors]
-let result = (options[Math.floor(Math.random() * 10)%3])
 
+let playerChoice;
+let computerChoice;
 const start = (e) => {
     
     choice = e.target.id
@@ -32,42 +31,81 @@ const animation = () => {
 
 const chosedOption = (choice) => {
 
-    randomizeEnemyMove()
+    
     setTimeout(()=>{
     if(rockChoice.id === choice) {
         playerImg.src = "/images/rock.png"
+        playerChoice = 'rock'
     }
 
     if(paperChoice.id === choice) {
         playerImg.src = "/images/paper.png"
+        playerChoice = 'paper'
     }
 
     if(scissorsChoice.id === choice) {
         playerImg.src = "/images/sic.png"
+        playerChoice = 'scissors'
     }
-
-    
+    randomizeEnemyMove()
+    showResult()
         },700)
-    }
+
+}
 
 const randomizeEnemyMove = () => {
     
+    const options = [rock,paper,scissors]
+
+    let result = (options[Math.floor(Math.random() * 10)%3])   
     
     if(result.id === rock.id) {
         computerImg.src = "/images/rock.png"
+        computerChoice = 'rock'
     }
     if(result.id == paper.id) {
         computerImg.src = "/images/paper.png"
+        computerChoice = 'paper'
     }
     if(result.id == scissors.id) {
         computerImg.src = "/images/sic.png"
+        computerChoice = 'scissors'
     }
 
 }
 
-const testing = () => {
+const showResult = () => {
+    // resultOfBattle.innerHTML = ` Elo`
+    let playerScore = 0;
+    let computerScore = 0;
+
+    if(playerChoice == computerChoice) {
+        console.log('draw');
+    }
+    if(playerChoice === 'rock' && computerChoice ==='paper') {
+        console.log('computer win');
+    }
+
+    if(playerChoice === 'rock' && computerChoice ==='scissors') {
+        console.log('player win');
+    }
+    if(playerChoice === 'paper' && computerChoice ==='rock') {
+        console.log('player win');
+    }
+    if(playerChoice === 'paper' && computerChoice ==='scissors') {
+        console.log('computer win');
+    }
+
+    if(playerChoice === 'scissors' && computerChoice ==='rock') {
+        console.log('computer win');
+    }
+    if(playerChoice === 'scissors' && computerChoice ==='paper') {
+        console.log('player win');
+    }
+    
     
 }
+
 
 
 

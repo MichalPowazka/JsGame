@@ -31,7 +31,7 @@ header {
     color: white;
 }
 
-.result {
+.mainView {
     display: flex;
     width: 80%;
     align-items: center;
@@ -60,9 +60,9 @@ h2 {
     box-shadow: 0 0 5px;   
 }
 .options {
-    width: 50vw;
+    width: 60%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 button {
@@ -113,10 +113,65 @@ button:hover {
 }
 
 
-@media only screen and (max-width:1366px) {
+@media only screen and (max-width:1600px) {
     
+    header {
+        font-size: 30px;  
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    .player img, .enemy img {
+        height: 28vh;
+        width: 28vh;  
+    }
     
 }
+
+
+@media only screen and (max-width:1360px) {
+    
+    header {
+        font-size: 26px;  
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .player img, .enemy img {
+        height: 23vh;
+        width: 23vh;  
+    }
+
+    button {
+        width: 150px;
+        height: 60px;
+    }
+    
+}
+
+@media only screen and (max-width:992px) {
+    
+    header {
+        font-size: 20px;
+        margin-bottom: 50px;  
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .player img, .enemy img {
+        height: 20vh;
+        width: 20vh;  
+    }
+    
+}
+
+
 
 
 

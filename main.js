@@ -8,12 +8,12 @@ const paperChoice = document.querySelector('#paper')
 const scissorsChoice = document.querySelector('#scissors')
 const allBtn = document.querySelectorAll('button')
 
-console.log(allBtn);
 
 let playerChoice;
 let computerChoice;
 let playerScore = 0;
 let computerScore = 0;
+
 const start = (e) => {
     
     choice = e.target.id
@@ -56,7 +56,9 @@ const chosedOption = (choice) => {
     }
     randomizeEnemyMove()
     showResult()
+    
         },1000)
+    
 
 }
 
@@ -82,33 +84,44 @@ const randomizeEnemyMove = () => {
 }
 
 const showResult = () => {
-    // resultOfBattle.innerHTML = ` Elo`
+    
     
 
     if(playerChoice == computerChoice) {
+        resultOfBattle.style.color = "white"
         resultOfBattle.innerHTML = 'Draw'
     }
     if(playerChoice === 'rock' && computerChoice ==='paper' || playerChoice === 'paper' && computerChoice ==='scissors' || playerChoice === 'scissors' && computerChoice ==='rock') {
         computerScore++;
+        resultOfBattle.style.color = "tomato"
         resultOfBattle.innerHTML = 'Computer Win'
         computerPoints.innerHTML = `${computerScore}`
+        computerPoints.classList.toggle("changes")
+        setTimeout(()=> {
+            computerPoints.classList.toggle("changes")
+        },1000)
+        
     }
 
     if(playerChoice === 'rock' && computerChoice ==='scissors' || playerChoice === 'paper' && computerChoice ==='rock' || playerChoice === 'scissors' && computerChoice ==='paper') {
         playerScore++;
+        resultOfBattle.style.color = "lime"
         resultOfBattle.innerHTML = `Player Win`
         playerPoints.innerHTML = `${playerScore}`
+        playerPoints.classList.toggle("changes")
+        setTimeout(()=> {
+            playerPoints.classList.toggle("changes")
+        },1000)
+        
     }
 
-    allBtn.forEach( newelement => {
-        newelement.disabled = false;
+    allBtn.forEach( element => {
+        element.disabled = false;
     })
    
     
     
 }
-
-
 
 
 rockChoice.addEventListener("click",start)

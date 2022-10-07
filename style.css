@@ -85,7 +85,10 @@ button:hover {
 }
 
 
-
+.changes{
+    color: #0b4459;
+    transition:  all 1s ease;
+}
 .shakeAnimation {
     position: relative;
     animation: shake 1s ;
@@ -107,6 +110,12 @@ button:hover {
       40%, 60% {
         transform: translate3d(8px, 0, 0);
       }
+}
+
+
+@media only screen and (max-width:1366px) {
+    
+    
 }
 
 

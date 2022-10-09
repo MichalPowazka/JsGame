@@ -168,11 +168,55 @@ button:hover {
         height: 20vh;
         width: 20vh;  
     }
+
+    button {
+        width: 125px;
+        height: 50px;
+    }
     
 }
 
 
+@media only screen and (max-width:768px) {
+    
+    header {
+        font-size: 16px;
+    }
 
+    h2 {
+        font-size: 20px;
+    }
 
+    .player img, .enemy img {
+        height: 18vh;
+        width: 18vh;  
+    }
 
+    button {
+        width: 100px;
+        height: 40px;
+    }
+    
+}
 
+@media only screen and (max-width:576px) {
+    
+    header {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .player img, .enemy img {
+        height: 15vh;
+        width: 15vh;  
+    }
+
+    button {
+        width: 75px;
+        height: 30px;
+    }
+    
+}

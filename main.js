@@ -46,12 +46,12 @@ const chosedOption = (choice) => {
     }
 
     if(paperChoice.id === choice) {
-        playerImg.src = "../images/paper.png"
+        playerImg.src = "./images/paper.png"
         playerChoice = 'paper'
     }
 
     if(scissorsChoice.id === choice) {
-        playerImg.src = ". ./images/sic.png"
+        playerImg.src = "./images/sic.png"
         playerChoice = 'scissors'
     }
     randomizeEnemyMove()
@@ -69,15 +69,15 @@ const randomizeEnemyMove = () => {
     let result = (options[Math.floor(Math.random() * 10)%3])   
     
     if(result.id === rock.id) {
-        computerImg.src = "../images/rock.png"
+        computerImg.src = "./images/rock.png"
         computerChoice = 'rock'
     }
     if(result.id == paper.id) {
-        computerImg.src = "../images/paper.png"
+        computerImg.src = "./images/paper.png"
         computerChoice = 'paper'
     }
     if(result.id == scissors.id) {
-        computerImg.src = "../images/sic.png"
+        computerImg.src = "./images/sic.png"
         computerChoice = 'scissors'
     }
 

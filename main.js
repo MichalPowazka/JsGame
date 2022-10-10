@@ -96,9 +96,9 @@ const showResult = () => {
         resultOfBattle.style.color = "tomato"
         resultOfBattle.innerHTML = 'Computer Win'
         computerPoints.innerHTML = `${computerScore}`
-        computerPoints.classList.toggle("changes")
+        computer.classList.toggle("changes")
         setTimeout(()=> {
-            computerPoints.classList.toggle("changes")
+            computer.classList.toggle("changes")    
         },1000)
         
     }

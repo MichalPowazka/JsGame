@@ -41,7 +41,7 @@ const chosedOption = (choice) => {
     
     setTimeout(()=>{
     if(rockChoice.id === choice) {
-        playerImg.src = "./images/rock.png"
+        playerImg.src = "../images/rock.png";
         playerChoice = 'rock'
     }
 

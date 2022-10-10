@@ -41,17 +41,17 @@ const chosedOption = (choice) => {
     
     setTimeout(()=>{
     if(rockChoice.id === choice) {
-        playerImg.src = "../images/rock.png"
+        playerImg.src = "./images/rock.png"
         playerChoice = 'rock'
     }
 
     if(paperChoice.id === choice) {
-        playerImg.src = "../images/paper.png"
+        playerImg.src = "./images/paper.png"
         playerChoice = 'paper'
     }
 
     if(scissorsChoice.id === choice) {
-        playerImg.src = "../images/sic.png"
+        playerImg.src = "./images/sic.png"
         playerChoice = 'scissors'
     }
     randomizeEnemyMove()
